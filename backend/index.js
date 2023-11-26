@@ -2,20 +2,20 @@ import express from "express";
 import { PORT, db } from "./config.js";
 import mongoose from "mongoose";
 import router from "./routes/book.route.js";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
-
+// handling CORS policy
+// app.use(cors({
+// 	origin: 'http://localhost:5173',
+// 	methods: ["GET", "POST", "PUT", "DELETE"],
+// 	allowedHeaders: ['Content-Type']
+// }));
+app.use(cors());
 // using route
 app.use("/books", router);
-
-// handling CORS policy
-app.use(cors({
-	origin: 'http://localhost:5173',
-	methods: ["GET", "POST", "PUT", "DELETE"],
-	allowedHeaders: ['Content-Type']
-}));
 
 // home route
 app.get("/", (req, res) => {
