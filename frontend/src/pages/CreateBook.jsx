@@ -62,7 +62,7 @@ const CreateBook = () => {
                                 Publish year
                             </label>
                             <input
-                                type="text"
+                                type="number"
                                 value={publishYear}
                                 onChange={(e) => setPublishYear(e.target.value)}
                                 className="border-2 border-gray-500 px-4 py-2 w-full"
