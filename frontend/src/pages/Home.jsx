@@ -26,6 +26,7 @@ const Home = () => {
 				setLoading(false);
 			});
 	}, []);
+    
 	return (
 		<>
 			<div className="p-4">
