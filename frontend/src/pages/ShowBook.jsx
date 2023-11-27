@@ -7,7 +7,7 @@ import BackButton from "../components/BackButton.jsx";
 const ShowBook = () => {
     const [book, setBook] = useState({});
     const [loading, setLoading] = useState(false);
-    const {id} = useParams();
+    const {id} = useParams(); // getting id of specific book
     useEffect(() => {
         setLoading(true);
         axios

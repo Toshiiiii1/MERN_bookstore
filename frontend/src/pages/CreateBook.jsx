@@ -10,6 +10,7 @@ const CreateBook = () => {
 	const [publishYear, setPublishYear] = useState("");
 	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
+    // creating book
 	const handleSaveBook = () => {
 		const data = {
 			title,
@@ -19,8 +20,9 @@ const CreateBook = () => {
 		setLoading(true);
 		axios
 			.post("http://localhost:5555/books", data)
-			.then(() => {
+			.then((res) => {
 				setLoading(false);
+                alert(res.data.message);
 				navigate("/");
 			})
 			.catch(() => {
