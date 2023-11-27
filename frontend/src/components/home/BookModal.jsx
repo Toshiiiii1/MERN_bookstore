@@ -33,7 +33,7 @@ const BookModal = ({ book, onClose }) => {
 						<h2 className="my-1">{book.author}</h2>
 					</div>
 
-                    <p className="my-4">Anything you want to show</p>
+                    <p className="mt-4">Anything you want to show</p>
                     <p className="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut optio eum magnam esse! Aspernatur, et. Veniam hic dolorem, eaque blanditiis reiciendis aperiam rem perferendis alias, voluptatum id vero cupiditate laboriosam!</p>
 				</div>
 			</div>
